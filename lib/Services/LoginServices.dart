@@ -13,21 +13,6 @@ class LoginService {
     var url = Uri.parse(
         'https://higienic.com.br/higienic_api/usuarios/login.php?Usuario=$Email&Senha=$senha');
 
-    //var header = {"Content-Type": "application/json"};
-
-    // Map params = {
-    //   "call": "ListarEtapasPedido",
-    //   "app_key": "1638081361917",
-    //   "app_secret": "55c34c03f7437cd56d7b98e96f180e41",
-    //   "param": [
-    //     {"cCodIntPed": "233"}
-    //   ]
-    // };
-
-    // var _body = json.encode(params);
-    //  print("Header: $header");
-    //  print("Json enviado: $_body");
-
     var response = await http.post(url);
 
     var ret = response.statusCode;
@@ -39,7 +24,7 @@ class LoginService {
 
     if (response.statusCode == 200) {
       usuario = Usuario.fromJson(result);
-      print("Retorno : $usuario");
+      print("Retorno : $Usuario");
     } else {
       usuario = null;
     }
