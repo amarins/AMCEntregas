@@ -7,14 +7,19 @@ class PedidosService {
     var url =
         Uri.parse('https://app.omie.com.br/api/v1/produtos/pedidoetapas/');
 
-    Map data = {
-      'param': {'cCodIntPed': numero},
-      'call': 'ListarEtapasPedido',
+    Map param = {
+      "call": "ListarEtapasPedido",
       "app_key": "1638081361917",
-      "app_secret": "55c34c03f7437cd56d7b98e96f180e41"
+      "app_secret": "55c34c03f7437cd56d7b98e96f180e41",
+      "param": [
+        {"cCodIntPed": "233"}
+      ]
     };
 
-    var body = json.encode(data);
+    print("Parametros antes: $param");
+    var body = json.encode(param);
+
+    print("Parametros depois: $body");
 
     var response = await http.post(
       url,
