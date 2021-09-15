@@ -1,11 +1,13 @@
 import 'dart:convert';
-
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:amc_pedidos/Classes/usuarios_class.dart';
 
 class LoginService {
   static get nome => null;
+
+  final dio = Dio();
 
   static Future<Usuario> login(String Email, String senha) async {
     var usuario;
