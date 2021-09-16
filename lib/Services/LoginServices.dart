@@ -15,7 +15,7 @@ class LoginService {
     var url = Uri.parse(
         'https://higienic.com.br/higienic_api/usuarios/login.php?Usuario=$Email&Senha=$senha');
 
-    var response = await http.post(url);
+    var response = await http.get(url);
 
     var ret = response.statusCode;
     var resultado = response.body;
