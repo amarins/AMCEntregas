@@ -12,7 +12,7 @@ class PedidosService {
       "app_key": "1638081361917",
       "app_secret": "55c34c03f7437cd56d7b98e96f180e41",
       "param": [
-        {"cCodIntPed": "233", "nPagina": 1, "nRegPorPagina": 20}
+        {"cCodIntPed": "233"}
       ]
     };
 
